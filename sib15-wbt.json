@@ -2,8 +2,7 @@
    "variables":{
       "ansible_staging_directory":"/tmp/packer-provisioner-ansible-local",
       "atlas_username":"{{env `ATLAS_USERNAME`}}",
-      "atlas_name":"{{env `ATLAS_NAME`}}",
-      "version":"0.0.1"
+      "atlas_name":"{{env `ATLAS_NAME`}}"
    },
    "provisioners":[
       {
@@ -129,8 +128,7 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"vmware_desktop",
-            "created_at":"{{timestamp}}",
-            "version":"{{user `version`}}"
+            "version": 0.0.2
          }
       },
       {
@@ -142,8 +140,7 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"virtualbox",
-            "created_at":"{{timestamp}}",
-            "version":"{{user `version`}}"
+            "version": 0.0.2
          }
       }
    ]
