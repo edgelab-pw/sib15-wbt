@@ -1,0 +1,22 @@
+---
+# Retrieve the current hostname, because {{ ansible_hostname }} still contains the old name
+- shell: hostname
+  register: current_hostname
+
+- name: Ensure Smarty module path exists.
+  file:
+    path: "/usr/local/lib/php"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Untar Smarty
+  unarchive:
+    src: "https://github.com/smarty-php/smarty/archive/v3.1.29.tar.gz"
+    dest: "/usr/local/lib/php"
+    copy: no
+
+- name: PHP | Smarty Configuration file, php.ini
+  template: src=templates/etc-php5-apache2-php-ini.j2 dest=/etc/php5/apache2/php.ini owner=root group=root mode=0644
+

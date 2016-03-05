@@ -1,5 +1,7 @@
 #!/bin/bash -eux
 
+a2enmod ssl
+
 # Uninstall Ansible and remove PPA.
 apt-get -y remove --purge ansible
 apt-add-repository --remove ppa:ansible/ansible
