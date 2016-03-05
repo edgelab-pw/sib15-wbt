@@ -49,8 +49,8 @@
    ],
    "variables":{
       "ansible_staging_directory":"/tmp/packer-provisioner-ansible-local",
-      "atlas_username":"{{user `atlas_username`}}",
-      "atlas_name":"{{user `atlas_name`}}"
+      "atlas_username": "{{env `ATLAS_USERNAME`}}",
+      "atlas_name": "{{env `ATLAS_NAME`}}"
    },
    "builders":[
       {
