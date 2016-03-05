@@ -122,28 +122,8 @@
    ],
    "post-processors":[
       {
-         "type":"atlas",
-         "only":[
-            "vmware-iso"
-         ],
-         "artifact":"{{user `atlas_username`}}/{{user `atlas_name`}}",
-         "artifact_type":"vagrant.box",
-         "metadata":{
-            "provider":"vmware_desktop",
-            "version":"0.0.1"
-         }
-      },
-      {
-         "type":"atlas",
-         "only":[
-            "virtualbox-iso"
-         ],
-         "artifact":"{{user `atlas_username`}}/{{user `atlas_name`}}",
-         "artifact_type":"vagrant.box",
-         "metadata":{
-            "provider":"virtualbox",
-            "version":"0.0.1"
-         }
+         "output":"builds/{{.Provider}}-sib15-wbt.box",
+         "type":"vagrant"
       }
    ]
 }

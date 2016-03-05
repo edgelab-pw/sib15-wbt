@@ -1,1 +1,1 @@
-ISOs
+This directory will contain built Vagrant box files.
