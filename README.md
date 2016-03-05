@@ -17,6 +17,7 @@ The following software must be installed/present on your local machine before yo
   - [Vagrant](http://vagrantup.com/)
   - [VirtualBox](https://www.virtualbox.org/) (if you want to build the VirtualBox box)
   - [VMware Fusion](http://www.vmware.com/products/fusion/) (or Workstation - if you want to build the VMware box)
+
 ## Usage
 
 Copy the Vagrantfile to your local machine, then cd to the directory containing the file and run:
@@ -41,4 +42,5 @@ MIT license.
 
 ## Author Information
 Modified in 2016 by [Vinzenz Stadtmueller](https://www.edgelab.pw)
+
 Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
