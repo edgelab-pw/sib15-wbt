@@ -1,4 +1,10 @@
 {
+   "variables":{
+      "ansible_staging_directory":"/tmp/packer-provisioner-ansible-local",
+      "atlas_username":"{{env `ATLAS_USERNAME`}}",
+      "atlas_name":"{{env `ATLAS_NAME`}}",
+      "version":"0.0.1"
+   },
    "provisioners":[
       {
          "type":"shell",
@@ -47,11 +53,6 @@
          "script":"scripts/cleanup.sh"
       }
    ],
-   "variables":{
-      "ansible_staging_directory":"/tmp/packer-provisioner-ansible-local",
-      "atlas_username": "{{env `ATLAS_USERNAME`}}",
-      "atlas_name": "{{env `ATLAS_NAME`}}"
-   },
    "builders":[
       {
          "type":"virtualbox-iso",
@@ -73,7 +74,6 @@
          "headless":true,
          "http_directory":"http",
          "iso_urls":[
-            "/ISO/ubuntu-14.04.4-server-amd64.iso",
             "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
          ],
          "iso_checksum_type":"md5",
@@ -106,7 +106,6 @@
          "headless":true,
          "http_directory":"http",
          "iso_urls":[
-            "/ISO/ubuntu-14.04.4-server-amd64.iso",
             "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
          ],
          "iso_checksum_type":"md5",
@@ -130,7 +129,8 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"vmware_desktop",
-            "version":"0.0.1"
+            "created_at":"{{timestamp}}",
+            "version":"{{user `version`}}"
          }
       },
       {
@@ -142,7 +142,8 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"virtualbox",
-            "version":"0.0.1"
+            "created_at":"{{timestamp}}",
+            "version":"{{user `version`}}"
          }
       }
    ]

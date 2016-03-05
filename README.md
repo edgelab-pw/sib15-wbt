@@ -20,9 +20,14 @@ The following software must be installed/present on your local machine before yo
 
 ## Usage
 
-Copy the Vagrantfile to your local machine, then cd to the directory containing the file and run:
+Copy the Vagrantfile to your local machine, then cd to the directory containing the file and run for virtualbox:
+
+        $ vagrant up
+
+If you want to use a certain virtualization platforms, then add `--provider virtualbox` or `--provider vmware_desktop` to `vagrant up` command:
 
 	$ vagrant up --provider virtualbox
+
 
 ## Building with Packer 
 

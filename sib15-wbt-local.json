@@ -73,7 +73,7 @@
          "headless":true,
          "http_directory":"http",
          "iso_urls":[
-            "/ISO/ubuntu-14.04.4-server-amd64.iso",
+            "iso/ubuntu-14.04.4-server-amd64.iso",
             "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
          ],
          "iso_checksum_type":"md5",
@@ -106,7 +106,7 @@
          "headless":true,
          "http_directory":"http",
          "iso_urls":[
-            "/ISO/ubuntu-14.04.4-server-amd64.iso",
+            "iso/ubuntu-14.04.4-server-amd64.iso",
             "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
          ],
          "iso_checksum_type":"md5",
