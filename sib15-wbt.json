@@ -119,7 +119,11 @@
       }
    ],
    "post-processors":[
-      {
+        [{
+            "type": "vagrant",
+            "keep_input_artifact": false
+        },      
+	{
          "type":"atlas",
          "only":[
             "vmware-iso"
@@ -128,7 +132,7 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"vmware_desktop",
-            "version": "0.0.5"
+            "version": "0.0.6"
          }
       },
       {
@@ -140,8 +144,8 @@
          "artifact_type":"vagrant.box",
          "metadata":{
             "provider":"virtualbox",
-            "version": "0.0.5"
+            "version": "0.0.6"
          }
-      }
+      }]
    ]
 }
