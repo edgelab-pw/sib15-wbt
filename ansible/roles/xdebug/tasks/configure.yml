@@ -9,3 +9,25 @@
   notify:
     - restart webserver
     - restart php-fpm
+
+- name: Copy xdebug ini into php cli config folder.
+  template:
+    src: xdebug.ini.j2
+    dest: "/etc/php5/cli/conf.d/xdebug.ini"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart webserver
+    - restart php-fpm
+
+- name: Copy xdebug ini into php fpm config folder.
+  template:
+    src: xdebug.ini.j2
+    dest: "/etc/php5/fpm/conf.d/xdebug.ini"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart webserver
+    - restart php-fpm
