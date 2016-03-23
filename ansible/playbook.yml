@@ -12,4 +12,5 @@
     - app
     - xdebug
     - php_modules
+    - phpmyadmin
     - smarty
